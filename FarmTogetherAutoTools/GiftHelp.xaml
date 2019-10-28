@@ -1,0 +1,28 @@
+﻿<Window x:Class="FarmTogetherAutoTools.GiftHelp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmTogetherAutoTools"
+        mc:Ignorable="d"
+        Title="自动换奖牌功能-使用说明" Height="900" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFAAB2CD">
+    <Canvas>
+        <Image x:Name="Img01" Height="405" Canvas.Left="17" Canvas.Top="10" Width="720" Source="Resources/M1Row.png"/>
+        <Image x:Name="Img02" Height="405" Canvas.Left="17" Canvas.Top="419" Width="720" Source="Resources/M2Row.png"/>
+        <TextBlock Canvas.Left="780" TextWrapping="Wrap" Text="在使用此功能前，请在游戏中利用Shift切换至快跑状态" Canvas.Top="25" FontSize="30"/>
+        <TextBlock Canvas.Left="780" TextWrapping="Wrap" Text="如果你只有一列 礼物店（如左图所示）：&#x000D;
+请选择单列礼物店，并输入礼物店的数量&#x000D;
+如左图中所示，则输入5&#x000D;
+之后在游戏中，请站在最边上的一个礼物店上&#x000D;
+让游戏视角大致朝向其他礼物店的方向（如左图）&#x000D;
+之后按下快捷键（或按下按钮），就可以撒手不管啦" Canvas.Top="90" FontSize="30"/>
+        <TextBlock Canvas.Left="780" TextWrapping="Wrap" Text="如果你有两列 礼物店（如左图所示）：&#x000D;
+请选择两列礼物店，并输入其中一列礼物店的数量&#x000D;
+如左图中所示，则输入3。&#x000D;
+务必确保两列礼物店数量一致，否则请以较少的一列为准&#x000D;
+请站在两列礼物店中间 靠左那列的第一个礼物店上&#x000D;
+让游戏视角大致朝向其他礼物店的方向（如左图）&#x000D;
+之后按下快捷键（或按下按钮），就可以撒手不管啦" Canvas.Top="454" FontSize="30"/>
+        <TextBlock Canvas.Left="780" TextWrapping="Wrap" Text="提示：建议两列摆放。此外，当两列总数超过20时，受限于程序需要等待以确保准确性，已达到不间断地兑换奖章，因此更多的礼物店将不再提升效率。" Canvas.Top="783" FontSize="20" Height="53" Width="774"/>
+    </Canvas>
+</Window>

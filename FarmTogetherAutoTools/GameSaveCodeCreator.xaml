@@ -1,0 +1,142 @@
+﻿<Window x:Class="FarmTogetherAutoTools.GameSaveCodeCreator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmTogetherAutoTools"
+        mc:Ignorable="d"
+        Title="存档代码修改器，使用前请务必先备份存档。" Height="700" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFC2DBFF">
+    <Canvas>
+        <Button x:Name="BtSearchSave" Content="自动搜寻存档" Canvas.Left="57" Canvas.Top="40" Width="117" Height="38" Click="SearchSaveDir" Background="#FFA2F38B"/>
+        <Button Content="手动加载存档" Canvas.Left="188" Canvas.Top="40" Width="112" Click="OpenFileAndLoad" Height="38" Background="#FFA2F38B"/>
+        <Button x:Name="BtAutoFlat" Content="一键改平原" Canvas.Left="188" Canvas.Top="256" Width="112" Click="SetFlatAuto" Height="38" Background="#FFDEDEDE"/>
+        <Image x:Name="ImgChunk_0_0" Height="40" Canvas.Left="375" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel" KeyDown="ChangeChunIdByKey" KeyUp="ChangeChunIdByKey" PreviewKeyDown="ChangeChunIdByKey"/>
+        <Image x:Name="ImgChunk_0_1" Height="40" Canvas.Left="375" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_0_2" Height="40" Canvas.Left="375" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_0_3" Height="40" Canvas.Left="375" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_0_4" Height="40" Canvas.Left="375" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_0_5" Height="40" Canvas.Left="375" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_0_6" Height="40" Canvas.Left="375" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_0" Height="40" Canvas.Left="454" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_1" Height="40" Canvas.Left="454" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_2" Height="40" Canvas.Left="454" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_3" Height="40" Canvas.Left="454" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_4" Height="40" Canvas.Left="454" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_5" Height="40" Canvas.Left="454" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_1_6" Height="40" Canvas.Left="454" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_0" Height="40" Canvas.Left="533" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_1" Height="40" Canvas.Left="533" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_2" Height="40" Canvas.Left="533" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_3" Height="40" Canvas.Left="533" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_4" Height="40" Canvas.Left="533" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_5" Height="40" Canvas.Left="533" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_2_6" Height="40" Canvas.Left="533" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_0" Height="40" Canvas.Left="612" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_1" Height="40" Canvas.Left="612" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_2" Height="40" Canvas.Left="612" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_3" Height="40" Canvas.Left="612" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_4" Height="40" Canvas.Left="612" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_5" Height="40" Canvas.Left="612" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_3_6" Height="40" Canvas.Left="612" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_0" Height="40" Canvas.Left="691" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_1" Height="40" Canvas.Left="691" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_2" Height="40" Canvas.Left="691" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_3" Height="40" Canvas.Left="691" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_4" Height="40" Canvas.Left="691" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_5" Height="40" Canvas.Left="691" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_4_6" Height="40" Canvas.Left="691" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_0" Height="40" Canvas.Left="770" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_1" Height="40" Canvas.Left="770" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_2" Height="40" Canvas.Left="770" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_3" Height="40" Canvas.Left="770" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_4" Height="40" Canvas.Left="770" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_5" Height="40" Canvas.Left="770" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_5_6" Height="40" Canvas.Left="770" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_0" Height="40" Canvas.Left="849" Canvas.Top="270" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_1" Height="40" Canvas.Left="849" Canvas.Top="230" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_2" Height="40" Canvas.Left="849" Canvas.Top="190" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_3" Height="40" Canvas.Left="849" Canvas.Top="150" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_4" Height="40" Canvas.Left="849" Canvas.Top="110" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_5" Height="40" Canvas.Left="849" Canvas.Top="70" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <Image x:Name="ImgChunk_6_6" Height="40" Canvas.Left="849" Canvas.Top="30" Width="80" MouseWheel="ChangeChunkIdByWheel"/>
+        <TextBox x:Name="TxtItemCodes" Height="297" Canvas.Left="350" TextWrapping="Wrap" Text="" Canvas.Top="333" Width="612"/>
+        <TextBlock Canvas.Left="57" TextWrapping="Wrap" Text="目前活动代码更新至2019.10.19，如果有更新的物品代码，请删除右侧的文本框中的内容并粘贴进最新的全部代码，再使用一键添加或选择文件添加。如果是群员，将群文件中更新的代码放入右侧文本框替换原有的代码。&#x000D;QQ群：973116708" Canvas.Top="338" Width="268" FontSize="15" LineHeight="22"/>
+        <TextBlock Canvas.Left="57" TextWrapping="Wrap" Text="选择你想修改的农场名称：" Canvas.Top="117" FontSize="14"/>
+        <ComboBox x:Name="Cb_FileNum" Canvas.Left="57" Canvas.Top="138" Width="190" SelectionChanged="ComboBox_SelectionChanged" IsEnabled="False" FontSize="14"/>
+        <TextBlock Canvas.Left="57" TextWrapping="Wrap" Text="读取时出现卡顿是正常的。" Canvas.Top="88" Width="243" Foreground="Red" FontWeight="Bold" FontSize="14"/>
+        <Separator x:Name="Line0" Height="2" Canvas.Left="375" Margin="0" Canvas.Top="69" Width="554" Background="Black"/>
+        <Separator x:Name="Line1" Height="2" Canvas.Left="375" Margin="0" Canvas.Top="109" Width="554" Background="Black"/>
+        <Separator x:Name="Line2" Height="2" Canvas.Left="375" Margin="0" Canvas.Top="149" Width="554" Background="Black"/>
+        <Separator x:Name="Line3" Height="2" Canvas.Left="375" Margin="0" Canvas.Top="189" Width="554" Background="Black"/>
+        <Separator x:Name="Line4" Height="2" Canvas.Left="375" Margin="0" Canvas.Top="229" Width="554" Background="Black"/>
+        <Separator x:Name="Line5" Height="2" Canvas.Left="375" Margin="0" Canvas.Top="269" Width="554" Background="Black"/>
+        <Separator x:Name="Line6" Height="2" Canvas.Left="314" Margin="0" Canvas.Top="169" Width="280" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator x:Name="Line7" Height="2" Canvas.Left="393" Margin="0" Canvas.Top="169" Width="280" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator x:Name="Line8" Height="2" Canvas.Left="472" Margin="0" Canvas.Top="169" Width="280" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator x:Name="Line9" Height="2" Canvas.Left="551" Margin="0" Canvas.Top="169" Width="280" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator x:Name="Line10" Height="2" Canvas.Left="630" Margin="0" Canvas.Top="169" Width="280" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Separator x:Name="Line11" Height="2" Canvas.Left="709" Margin="0" Canvas.Top="169" Width="280" RenderTransformOrigin="0.5,0.5" Background="Black">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Rectangle Height="280" Canvas.Left="374" Stroke="Black" Canvas.Top="30" Width="555"/>
+        <CheckBox Content="开启辅助网格线" Canvas.Left="159" Canvas.Top="227" Width="141" IsChecked="True" Unchecked="HideChunkLines" Checked="ShowChunkLines" FontSize="14"/>
+        <TextBlock Canvas.Left="57" TextWrapping="Wrap" Text="在右侧预览地图上使用滚轮即可改变地形。完成后保存修改即可。" Canvas.Top="176" Width="238" FontSize="15"/>
+        <Button x:Name="BtSaveTheChange" Content="保存修改" Canvas.Left="57" Canvas.Top="256" Width="112" Click="SaveMapFinal" Height="38" Background="#FFDEDEDE"/>
+        <Button Content="自动搜索并   一键添加   活动奖励" Canvas.Left="57" Canvas.Top="502" Width="268" Height="40" FontSize="12" Click="AutoActivityItemsCodeChange" Background="#FFFBA2FF"/>
+        <Button Content="选择farms.data文件并添加活动奖励" Canvas.Left="57" Canvas.Top="572" Width="268" Click="ActivityItemsCodeChange" Height="40" FontSize="12" Background="#FFFBA2FF"/>
+        <Separator Height="17" Canvas.Left="57" Margin="0" Canvas.Top="314" Width="905" Background="Black"/>
+
+    </Canvas>
+</Window>

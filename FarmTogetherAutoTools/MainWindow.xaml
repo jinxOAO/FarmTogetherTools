@@ -1,0 +1,43 @@
+﻿<Window x:Class="FarmTogetherAutoTools.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FarmTogetherAutoTools"
+        mc:Ignorable="d"
+        Title="一起玩农场工具箱 0.3.1  --by GniMaerd    QQ群：973116708" Height="480" Width="700" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" KeyDown="Window_KeyDown" Background="#FFAAB2CD">
+    <Canvas>
+
+        <GroupBox Header="使用前两个功能时请确保已在拖拉机上。站在对应格子上按快捷键即可开始向前工作。" Height="210" Canvas.Left="20" Canvas.Top="18" Width="555" FontSize="14" BorderBrush="#FF6DFF07" FontWeight="Bold"/>
+        <GroupBox Header="测试中的功能，请务必先阅读说明" Height="181" Canvas.Left="20" Canvas.Top="230" Width="555" FontSize="14" BorderBrush="#FF6DFF07" FontWeight="Bold"/>
+        <Button Content="  停 止&#x000D;(Alt+Z)" Canvas.Left="460" Canvas.Top="151" Width="100" Background="#FFC51919" Foreground="Black" Click="StopAll" Height="55" FontSize="17" FontWeight="Bold"/>
+        <Button Content="收获并犁地&#x000D;( Alt + F )" Canvas.Left="50" Canvas.Top="40" Width="100" Click="AutoPlantDouble" Height="55" FontWeight="Bold" Background="#FF6EE04D" FontSize="15"/>
+        <Button Content=" 自动种植&#x000D;( Alt + G )" Canvas.Left="50" Canvas.Top="100" Width="100" Click="AutoPlant" Height="55" FontWeight="Bold" Background="#FF6EE04D" FontSize="15"/>
+        <Button Content=" 挂机互动&#x000D;( Alt + H )" Canvas.Left="50" Canvas.Top="160" Width="100" Click="AutoContinueSpace" Height="55" FontWeight="Bold" Background="#FF6EE04D" FontSize="15"/>
+        <TextBlock Canvas.Left="170" TextWrapping="Wrap" Text="犁地并种植、收获花并浇水都可以使用。" Canvas.Top="60" FontSize="14"/>
+        <TextBlock Canvas.Left="170" TextWrapping="Wrap" Text="需要先手持作物。此功能不会在种植后浇水。&#x000D;还可用于浇水或收获树木。" Canvas.Top="110" FontSize="14"/>
+        <TextBlock Canvas.Left="170" TextWrapping="Wrap" Text="同鼠标连点器。&#x000D;钓鱼、持续卖出作物或挂机交付打工券等。" Canvas.Top="170" FontSize="14"/>
+        <Button x:Name="BtHelp_0" Content="帮助与说明" Canvas.Left="460" Canvas.Top="52" Width="100" Click="ToolHelp" Height="36" FontSize="15"/>
+
+
+        <Button Content=" 挂机换奖牌&#x000D; ( Alt + J )" Canvas.Left="50" Canvas.Top="255" Width="100" Click="AutoMedal" Height="55" FontWeight="Bold" Background="#FFE8DF29" FontSize="15"/>
+        <TextBlock Canvas.Left="170" TextWrapping="Wrap" Text="礼物店列数" Canvas.Top="260"/>
+        <TextBlock Canvas.Left="170" TextWrapping="Wrap" Text="每列有礼物店的数目" Canvas.Top="285"/>
+        <RadioButton x:Name="RbChange_1" Content="单列礼物店" Canvas.Left="244" Canvas.Top="261" IsChecked="True" Checked="ChangeGiftStoreRow"/>
+        <RadioButton x:Name="RbChange_2" Content="两列礼物店" Canvas.Left="346" Canvas.Top="261" Checked="ChangeGiftStoreRow"/>
+        <TextBox x:Name="TxtGiftStoreNum" Height="17" Canvas.Left="305" TextWrapping="Wrap" Text="2" Canvas.Top="284" Width="120"/>
+
+        <Button x:Name="BtHelp_1" Content="使用说明" Canvas.Left="460" Canvas.Top="261" Width="100" Click="ToolHelpMedal" Height="39" FontSize="15"/>
+
+
+        <Button Content="跳至下个季节&#x000D;  ( Alt + R )" Canvas.Left="50" Canvas.Top="338" Width="100" Click="GotoNextSeason" Background="#FFF1C1FF" Height="59" FontSize="15" FontWeight="Bold"/>
+        <TextBlock Canvas.Left="170" TextWrapping="Wrap" Text="快速跳转到特定季节：（如果无效请多次尝试或退出存档重新进入再尝试）" Canvas.Top="340"/>
+        <Button x:Name="TurnSeasonTo_0" Content="春季" Canvas.Left="170" Canvas.Top="360" Width="75" Click="SeasonSelect" Height="37" FontSize="15" Background="#FF5ED14C"/>
+        <Button x:Name="TurnSeasonTo_1" Content="夏季" Canvas.Left="250" Canvas.Top="360" Width="75" Click="SeasonSelect" Height="37" FontSize="15" Background="#FFDCB634"/>
+        <Button x:Name="TurnSeasonTo_2" Content="秋季" Canvas.Left="330" Canvas.Top="360" Width="75" Click="SeasonSelect" Height="37" FontSize="15" Background="#FFD6DE28"/>
+        <Button x:Name="TurnSeasonTo_3" Content="冬季" Canvas.Left="410" Canvas.Top="360" Width="75" Click="SeasonSelect" Height="37" FontSize="15" Background="#FF60BAE4"/>
+        <Button Content="存&#x000D;档&#x000D;修&#x000D;改&#x000D;工&#x000D;具" Canvas.Left="592" Canvas.Top="170" Width="80" Height="241" FontSize="17" FontWeight="Bold" Background="#FFEEA8E1" Click="OpenSaveGeneratorWindow"/>
+        <Button Content="  一键&#x000D;改平原" Canvas.Left="592" Canvas.Top="28" Width="80" Height="118" FontSize="17" FontWeight="Bold" Background="#FFEEA8E1" Click="OneClickChangeFlat"/>
+
+    </Canvas>
+</Window>
